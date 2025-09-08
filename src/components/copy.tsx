@@ -24,7 +24,7 @@ const CopyButton = ({ textToCopy }: CopyButtonProps) => {
   return (
     <button
       onClick={handleCopy}
-      className="absolute top-2 right-2 p-1.5 text-slate-500 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
+      className="absolute top-2 right-2 p-1.5 text-[#9D5151] rounded-lg hover:bg-slate-200 dark:hover:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors"
       aria-label="Copy quote"
       title={isCopied ? "Copied!" : "Copy to clipboard"}
     >

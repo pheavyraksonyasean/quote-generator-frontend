@@ -26,7 +26,7 @@ const Button = ({ onClick }: ButtonProps) => {
         font-mono
       "
     >
-      Generate New Quote
+      New Quote
     </button>
   );
 };
