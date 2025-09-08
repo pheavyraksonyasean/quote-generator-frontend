@@ -44,6 +44,22 @@ SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZi
 PORT=5000
 ```
 
+## Architecture Explanation
+The Quote Generator follows a three-layer architecture:
+
+### Frontend (React)
+- The React app displays quotes to users.
+- It sends a request to the backend API at [http://localhost:3000/api/random-quote](http://localhost:3000/api/random-quote).
+- Once the response is received, the frontend renders the quote and author dynamically.
+
+### Backend (Express)
+- The Express server listens on [http://localhost:3000](http://localhost:3000).
+- It exposes an API endpoint [http://localhost:3000/api/random-quote](http://localhost:3000/api/random-quote).
+- When called, it communicates with Supabase by invoking a stored procedure (get_random_quote) to fetch a random quote.
+
+### Database (Supabase)
+- Supabase stores the quotes and authors.
+- The backend uses the Supabase client to call the database function and return the result to the frontend.
 
 
 
