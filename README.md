@@ -1,70 +1,68 @@
-# React + TypeScript + Vite
+# Quote Generator  
+*by [Sean Pheavyraksonya]*  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description  
+The **Quote Generator** is a simple yet inspiring web application that delivers quotes from some of the world’s greatest minds.  
+It is built with a **React** frontend, a **Node.js/Express** backend, and uses **Supabase** as the database for storing and retrieving quotes.  
 
-Currently, two official plugins are available:
+## Features  
+- Get random inspirational quotes  
+- Copy quotes with one click  
+- Generate new quotes instantly  
+- Modern UI with clean design  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup Instructions  
 
-## Expanding the ESLint configuration
+### 1. Clone the repository  
+```bash
+git clone https://github.com/pheavyraksonyasean/quote-generator-frontend.git
+git clone https://github.com/pheavyraksonyasean/quote-generator-backend.git
+```
+### 2. Install dependencies
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Frontend (React)
+```bash
+cd quote-generator-frontend
+npm install
+npm run dev
+```
+Frontend run : [http://localhost:3000](http://localhost:3000)
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+#### Backend (Express+Supabase)
+```bash
+cd quote-generator-backend
+npm install
+npm run dev
+```
+Backend run : [http://localhost:5000](http://localhost:5000)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### 3. Environment Variables
+Create a .env file inside the backend folder:
+```bash
+SUPABASE_URL=https://flkodwlkaehdnpecwjqd.supabase.co
+SUPABASE_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZsa29kd2xrYWVoZG5wZWN3anFkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTcwNjA4MDgsImV4cCI6MjA3MjYzNjgwOH0.tGuyRLMooTO8wRPjSrWurfTNtUjhVNhAFhWzU_EEnbI
+PORT=5000
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-# quote-generator-frontend
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
